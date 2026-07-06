@@ -4,7 +4,7 @@ export default function Hero() {
   const [first, ...rest] = profile.name.split(' ')
   const last = rest.join(' ')
   return (
-    <header className="hero" id="about">
+    <header className="hero" id="home">
       <div className="wrap">
         <div className="hero-eyebrow">{profile.eyebrow}</div>
         <h1 className="hero-name">

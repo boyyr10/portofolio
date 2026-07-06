@@ -3,6 +3,10 @@
 export const profile = {
   name: 'Muhammad Yusuf Ramadhan',
   eyebrow: '// ML & EMBEDDED SYSTEMS ENGINEER',
+  // Put your photo file in src/assets/ and import it, OR use a URL.
+  // Example: import photo from '../assets/photo.jpg' then set photo: photo
+  // To hide the photo entirely, set this to null.
+  photo: '/photo.jpg',
   tagline:
     'Final-year Computer Engineering student building machine learning systems, embedded devices, and web applications — from raw signal to deployed product.',
   links: {
@@ -11,6 +15,19 @@ export const profile = {
     batikDemo: 'https://batikeye.netlify.app',
   },
   location: 'Malang, East Java, ID',
+}
+
+export const about = {
+  bio: [
+    'Final-year Computer Engineering student at Universitas Brawijaya, focused on machine learning, embedded systems, and web development.',
+    'I build real-world systems end-to-end — from raw signal to deployed product — with Python, TensorFlow, and a strong drive to keep learning.',
+  ],
+  cards: [
+    { icon: 'brain', label: 'Machine Learning', color: '#00e5c7' },
+    { icon: 'code', label: 'Web Development', color: '#7c5cff' },
+    { icon: 'database', label: 'Data Science', color: '#1d9e75' },
+    { icon: 'cpu', label: 'Embedded / IoT', color: '#e24b4a' },
+  ],
 }
 
 export const stats = [
