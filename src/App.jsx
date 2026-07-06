@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
+import GridHighlight from './components/GridHighlight'
 import Hero from './components/Hero'
 import About from './components/About'
 import Experience from './components/Experience'
@@ -19,6 +20,7 @@ export default function App() {
 
   return (
     <>
+      <GridHighlight />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />
