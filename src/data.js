@@ -41,7 +41,7 @@ export const experience = [
     date: 'Feb 2025 — Jun 2025',
     role: 'Machine Learning Engineer',
     org: 'Coding Camp 2025 · DBS Foundation',
-    photo: '/docs/batikeye-demo.jpg',
+    photos: ['/docs/batikeye-demo.jpg', '/docs/batikeye-team.jpg'],
     points: [
       'Built a MobileNetV2 classifier for 13 Indonesian batik motifs, reaching 95% test accuracy via transfer learning and two-phase fine-tuning.',
       'Deployed the model as a public web app on Netlify for real-time motif identification.',
@@ -51,7 +51,12 @@ export const experience = [
     date: 'Sep 2024 — Dec 2024',
     role: 'Finance & Web Lead',
     org: "AWMM Ojesy (Ojek Syar'i)",
-    photo: '/docs/ojesy-app.jpg',
+    photos: [
+      '/docs/ojesy-app.jpg',
+      '/docs/ojesy-web.jpg',
+      '/docs/ojesy-bmc.jpg',
+      '/docs/ojesy-meeting.jpg',
+    ],
     points: [
       'Led financial planning for a sharia ride-hailing student startup — Rp10.5M grant, projected P&L, BEP, and ROI modeling.',
       'Designed the UI/UX in Figma and built the responsive booking website end-to-end.',
@@ -61,7 +66,7 @@ export const experience = [
     date: 'Jul 2025 — Sep 2025',
     role: 'Facilitator',
     org: 'Google Cloud Arcade 2025 · Dicoding',
-    photo: '/docs/gca-dashboard.jpg',
+    photos: ['/docs/gca-dashboard.jpg', '/docs/gca-milestone.jpg'],
     points: [
       'Guided 46 learners through hands-on Google Cloud labs covering BigQuery ML, Vertex AI, and Cloud Vision.',
       'Drove 182 total badge completions across the cohort.',
