@@ -12,19 +12,27 @@ export default function Experience() {
             <div className="sec-line" />
           </div>
         </Reveal>
-        {experience.map((exp) => (
+        {experience.map((exp, idx) => (
           <Reveal key={exp.role + exp.date}>
-            <div className="exp-item">
-              <div className="exp-date">{exp.date}</div>
-              <div>
+            <div className={`exp-row ${exp.photo ? 'has-photo' : ''}`}>
+              <div className="exp-big-num">
+                {String(idx + 1).padStart(2, '0')}
+              </div>
+              <div className="exp-body">
                 <div className="exp-role">{exp.role}</div>
                 <div className="exp-org">{exp.org}</div>
+                <div className="exp-date">{exp.date}</div>
                 <ul>
                   {exp.points.map((p, i) => (
                     <li key={i}>{p}</li>
                   ))}
                 </ul>
               </div>
+              {exp.photo && (
+                <div className="exp-photo">
+                  <img src={exp.photo} alt={`${exp.org} documentation`} />
+                </div>
+              )}
             </div>
           </Reveal>
         ))}
