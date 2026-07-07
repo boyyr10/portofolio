@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
-// Auto-advancing image carousel with manual arrow + dot controls.
-// Pauses auto-play on hover. Falls back to a single static image if only one photo.
+// Auto-advancing image carousel with a smooth horizontal slide transition.
+// Manual arrow + dot controls, pauses auto-play on hover.
 export default function Carousel({ photos, alt }) {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
@@ -17,7 +17,7 @@ export default function Carousel({ photos, alt }) {
     if (paused || count <= 1) return
     timer.current = setInterval(() => {
       setIndex((i) => (i + 1) % count)
-    }, 3000)
+    }, 3500)
     return () => clearInterval(timer.current)
   }, [paused, count])
 
@@ -35,14 +35,15 @@ export default function Carousel({ photos, alt }) {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className="exp-carousel-track">
+      {/* The track slides horizontally; each slide is 100% wide. */}
+      <div
+        className="exp-carousel-track"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
         {photos.map((src, i) => (
-          <img
-            key={src}
-            src={src}
-            alt={`${alt} ${i + 1}`}
-            className={i === index ? 'active' : ''}
-          />
+          <div className="carousel-slide" key={src}>
+            <img src={src} alt={`${alt} ${i + 1}`} />
+          </div>
         ))}
       </div>
 
